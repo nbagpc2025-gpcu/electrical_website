@@ -1,0 +1,32 @@
+{
+ "department": {
+  "vision": "To transform learners in to best technocrat in field of electrical engineering for collective alliance benefit of industry, society and government",
+  "mission": [
+   "M-1: Provide quality education by ensuring optimal use of available resources to produce skilled technical personnel in the field of electrical engineering",
+   "M-2: Implant various technical and soft skills to enrich their problem solving and project management skills",
+   "M-3: Promote organizational and leadership qualities in learners for employability, start ups and Entrepreneurship through various extra-curricular and co-curricular activities",
+   "M-4: Create an environment where technical personnel will become lifelong learner and ethical servant of Society",
+   "M-5: Develop alliance with industries and other such institute to improve teaching learning, Skill development and placement"
+  ]
+ },
+ "peo_intro": "The Educational Objectives of Electrical Engineering Program represents major accomplishments that we expect from our diploma holder to have achieved three to five years after Diploma.",
+ "peos": [
+  "PEO-1: Practice Electrical engineering in a broad range of industries like operation-maintenance, Design,Testing, Production etc.",
+  "PEO-2: Execute various engineering related and Soft skills for problem solving and disciplinary and inter-disciplinary project management",
+  "PEO-3: Participate in activates related to start up and entrepreneurship in engineering and allied industries",
+  "PEO-4: Pursue higher studies and adapt new technologies to solve the Electrical Engineering problem for societal needs."
+ ],
+ "pos": [
+  "PO-1: Basic and Discipline specific knowledge: Apply knowledge of basic mathematics, science and engineering fundamentals and engineering specialization to solve the engineering problems.",
+  "PO-2: Problem analysis: Identify and analyse well-defined engineering problems using codified standard methods.",
+  "PO-3: Design/ development of solutions: Design solutions for well-defined technical problems and assist with the design of systems components or processes to meet specified needs.",
+  "PO-4: Engineering Tools, Experimentation and Testing: Apply modern engineering tools and appropriate technique to conduct standard tests and measurements.",
+  "PO-5: Engineering practices for society, sustainability and environment: Apply appropriate technology in context of society, sustainability, environment and ethical practices.",
+  "PO-6: Project Management: Use engineering management principles individually, as a team member or a leader to manage projects and effectively communicate about well-defined engineering activities.",
+  "PO-7: Life-long learning: Ability to analyse individual needs and engage in updating in the context of technological changes."
+ ],
+ "psos": [
+  "PSO-1: Apply The Knowledge Of Mathematics, Science And Simple Software For Solving Simple Electrical Engineering Problems.",
+  "PSO-2: Apply Principles Of Electrical Engineering And Laboratory Skills For Testing, Operation, And Maintenance Of Various Electrical Equipment"
+ ]
+}

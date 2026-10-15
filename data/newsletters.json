@@ -1,0 +1,43 @@
+{
+ "department": [
+  {
+   "title": "SPARK, Vol. 1",
+   "year": "2020-21",
+   "link": "https://sites.google.com/view/gpchhotaudepureed/department-news-letter"
+  },
+  {
+   "title": "SPARK, Vol. 2",
+   "year": "2021-22",
+   "link": "https://sites.google.com/view/gpchhotaudepureed/department-news-letter"
+  },
+  {
+   "title": "SPARK, Vol. 3",
+   "year": "2022-23",
+   "link": "https://sites.google.com/view/gpchhotaudepureed/department-news-letter"
+  }
+ ],
+ "institute": [
+  {
+   "title": "GPC Newsletter",
+   "year": "2021-22",
+   "link": "https://sites.google.com/view/gpchhotaudepureed/institute-news-letter"
+  },
+  {
+   "title": "GPC Newsletter",
+   "year": "2022-23",
+   "link": "https://sites.google.com/view/gpchhotaudepureed/institute-news-letter"
+  }
+ ],
+ "iete": [
+  {
+   "title": "IETE Newsletter, May–Aug 2022 (Vol. 25)",
+   "year": "2022",
+   "link": "https://sites.google.com/view/gpchhotaudepureed/iete-students-forum/news-letters-from-hq"
+  },
+  {
+   "title": "IETE Newsletter, Sep–Dec 2022",
+   "year": "2022",
+   "link": "https://sites.google.com/view/gpchhotaudepureed/iete-students-forum/news-letters-from-hq"
+  }
+ ]
+}
