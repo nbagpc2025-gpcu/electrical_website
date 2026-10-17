@@ -1,0 +1,3 @@
+Upload this folder’s contents to the same GitHub repository and publishing branch used by your existing website. Keep index.html at the repository root. The slideshow is below the homepage introduction and advances every 8 seconds. It pauses while hovered or focused. Visitors can select any of the 27 slides or use full screen. Reduced-motion users start with playback paused. Slides preserve the presentation as static images; PowerPoint animations, audio and video are not included. Original website and presentation files are unchanged.
+
+Changed or added files: index.html, assets/css/slideshow.css, assets/js/slideshow.js, assets/slideshow/.
