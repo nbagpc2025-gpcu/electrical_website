@@ -1,3 +1,5 @@
-Upload this folder’s contents to the same GitHub repository and publishing branch used by your existing website. Keep index.html at the repository root. The slideshow is below the homepage introduction and advances every 8 seconds. It pauses while hovered or focused. Visitors can select any of the 27 slides or use full screen. Reduced-motion users start with playback paused. Slides preserve the presentation as static images; PowerPoint animations, audio and video are not included. Original website and presentation files are unchanged.
+Upload the extracted contents of this folder to your existing GitHub website repository, keeping index.html at the repository root and the assets folder structure intact. Upload files, not this ZIP.
 
-Changed or added files: index.html, assets/css/slideshow.css, assets/js/slideshow.js, assets/slideshow/.
+This photos-only version includes laboratory photo galleries and a 30-slide homepage presentation. The three Instrumentation photos are slides 28–30. All video players, video downloads and video files have been removed. YouTube links can be added later.
+
+The View Laboratories button beside 5 Laboratories opens laboratories.html. Instrumentation has a separate gallery alongside the five labs in the slide deck.
