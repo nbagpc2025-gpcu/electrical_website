@@ -10,7 +10,7 @@
 /* VISITOR COUNTER (GoatCounter, free, no cookies)
    Create a GoatCounter account for this site (e.g. code "gpceed") and put the code here.
    Leave it "" and no visits are counted and no counter is shown. */
-window.VISIT_COUNTER_CODE = "";
+window.VISIT_COUNTER_CODE = "electricalwebsite";
 // Display-only starting value; never sent to GoatCounter.
 window.VISIT_COUNTER_START = 1000;
 

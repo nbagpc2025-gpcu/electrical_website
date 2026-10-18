@@ -125,12 +125,19 @@
     if (type === "notices") {
       el.innerHTML = '<p class="p-space-md bg-surface-container-lowest rounded-xl text-on-surface-variant">Loading notices…</p>';
       var current = [], controls;
+      var noticeColumn = document.createElement("div");
+      if (!limit) {
+        noticeColumn.className = "lg:col-span-8 space-y-space-sm";
+        el.before(noticeColumn); noticeColumn.appendChild(el);
+        el.classList.remove("lg:col-span-8");
+      }
+      el.setAttribute("aria-live", "polite");
       function paint() {
         var list = current.filter(function(n) {
           return !controls || ((!controls.q.value || [n.title,n.text,n.category,n.semester].join(" ").toLowerCase().includes(controls.q.value.toLowerCase())) &&
             (!controls.cat.value || n.category === controls.cat.value) && (!controls.sem.value || n.semester === controls.sem.value));
         });
-        el.innerHTML = list.length ? cut(list).map(noticeHTML).join("") : '<p>No notices match.</p>';
+        el.innerHTML = list.length ? cut(list).map(noticeHTML).join("") : '<p class="p-space-md bg-surface-container-lowest rounded-xl text-on-surface-variant">' + (current.length ? 'No notices match your filters.' : 'No notices are currently published. Please check back later.') + '</p>';
       }
       if (!limit) {
         var bar = document.createElement("div"); bar.className = "notice-filters";
@@ -146,7 +153,7 @@
           if (controls) [[controls.cat,"category","All categories"],[controls.sem,"semester","All semesters"]].forEach(function(item) {
             var old = item[0].value; item[0].replaceChildren(new Option(item[2],""));
             Array.from(new Set(list.map(function(n){return n[item[1]];}).filter(Boolean))).sort().forEach(function(v){item[0].add(new Option(v,v));});
-            item[0].value = old;
+            item[0].value = Array.from(item[0].options).some(function(o){ return o.value === old; }) ? old : "";
           });
           paint();
         });
