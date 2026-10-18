@@ -1,12 +1,104 @@
 {
- "note": "Fill in one entry per staff member (same fields as the Mechanical site). Until then the page shows the institute-portal profile links.",
- "staff": [],
- "portal_profiles": [
-  "http://www.gpch.cteguj.in/facultydetail/show/10632",
-  "http://www.gpch.cteguj.in/facultydetail/show/37336",
-  "http://www.gpch.cteguj.in/facultydetail/show/37334",
-  "http://www.gpch.cteguj.in/facultydetail/show/37331",
-  "http://www.gpch.cteguj.in/facultydetail/show/37329",
-  "http://www.gpch.cteguj.in/facultydetail/show/36861"
- ]
+  "note": "Professional faculty data supplied by the department. Photos and individual institute-profile associations remain pending. Only public-facing professional fields are stored.",
+  "staff": [
+    {
+      "name": "SHRI RAGHUVIRSINH DHIRUBHA PARMAR",
+      "role": "Faculty",
+      "designation": "Lecturer in Electrical Engineering, Class II",
+      "qualification": "ME/M.Tech",
+      "specialization": "",
+      "joined_institute": "15/02/2022",
+      "name_gu": "રઘુવીરસિંહ ધીરુભા પરમાર",
+      "short_name": "Shri R. D. Parmar",
+      "short_name_gu": "શ્રી આર. ડી. પરમાર",
+      "designation_gu": "વ્યાખ્યાતા ઇલેક્ટ્રીકલ, વર્ગ-૨",
+      "joined_service": "24/02/1997"
+    },
+    {
+      "name": "SHRI VASIMMAHAMAD HUSAINBHAI GHANCHI",
+      "role": "Faculty",
+      "designation": "Lecturer in Electrical Engineering, Class II",
+      "qualification": "ME/M.Tech",
+      "specialization": "",
+      "joined_institute": "02/11/2016",
+      "name_gu": "શ્રી વસિંમહમદ હુસેનભાઈ ઘાંચી",
+      "short_name": "Shri V. H. Ghanchi",
+      "short_name_gu": "શ્રી વી. એચ. ઘાંચી",
+      "designation_gu": "વ્યાખ્યાતા ઇલેક્ટ્રીકલ, વર્ગ-૨",
+      "joined_service": "02/11/2016"
+    },
+    {
+      "name": "SHRI SARFARAJ YUSUFBHAI GANDHI",
+      "role": "Faculty",
+      "designation": "Lecturer in Electrical Engineering, Class II",
+      "qualification": "ME/M.Tech",
+      "specialization": "",
+      "joined_institute": "08/11/2016",
+      "name_gu": "શ્રી સરફરાઝ યુસુફભાઈ ગાંધી",
+      "short_name": "Shri S. Y. Gandhi",
+      "short_name_gu": "શ્રી એસ. વાય. ગાંધી",
+      "designation_gu": "વ્યાખ્યાતા ઇલેક્ટ્રીકલ, વર્ગ-૨",
+      "joined_service": "08/11/2016"
+    },
+    {
+      "name": "SHRI GIRISHBHAI GOVINDBHAI PATEL",
+      "role": "Faculty",
+      "designation": "Lecturer in Electrical Engineering, Class II",
+      "qualification": "BE/B.Tech",
+      "specialization": "",
+      "joined_institute": "07/11/2016",
+      "name_gu": "શ્રી ગિરીશભાઈ ગોવિંદભાઈ પટેલ",
+      "short_name": "Shri G. G. Patel",
+      "short_name_gu": "શ્રી જી. જી. પટેલ",
+      "designation_gu": "વ્યાખ્યાતા ઇલેક્ટ્રીકલ, વર્ગ-૨",
+      "joined_service": "07/11/2016"
+    },
+    {
+      "name": "SHRI ROMIKUMAR MANHARBHAI KANTHARIA",
+      "role": "Faculty",
+      "designation": "Lecturer in Electrical Engineering, Class II",
+      "qualification": "BE/B.Tech",
+      "specialization": "",
+      "joined_institute": "03/11/2016",
+      "name_gu": "શ્રી રોમીકુમાર મનહરભાઈ કંથારીયા",
+      "short_name": "Shri R. M. Kantharia",
+      "short_name_gu": "શ્રી આર. એમ. કંથારીયા",
+      "designation_gu": "વ્યાખ્યાતા ઇલેક્ટ્રીકલ, વર્ગ-૨",
+      "joined_service": "03/11/2016"
+    },
+    {
+      "name": "SANDIPBHAI RAMANBHAI MAHETA",
+      "role": "Faculty",
+      "designation": "Lecturer in Electrical Engineering, Class II",
+      "qualification": "BE/B.Tech",
+      "specialization": "",
+      "joined_institute": "16/02/2022",
+      "name_gu": "શ્રી સંદિપભાઈ રમણભાઈ મહેતા",
+      "short_name": "Shri S. R. Maheta",
+      "short_name_gu": "શ્રી એસ. આર. મહેતા",
+      "designation_gu": "વ્યાખ્યાતા ઇલેક્ટ્રીકલ, વર્ગ-૨",
+      "joined_service": "29/10/2016"
+    },
+    {
+      "name": "SHRI YAMIN IQBALBHAI BHATI",
+      "role": "Faculty",
+      "designation": "Lecturer in Electrical Engineering, Class II",
+      "qualification": "ME/M.Tech",
+      "specialization": "",
+      "joined_institute": "28/11/2023",
+      "name_gu": "યામીન ઇકબાલભાઈ ભાટી",
+      "short_name": "Shri Y. I. Bhati",
+      "short_name_gu": "શ્રી વાય. આઈ. ભાટી",
+      "designation_gu": "વ્યાખ્યાતા ઇલેક્ટ્રીકલ, વર્ગ-૨",
+      "joined_service": "28/11/2023"
+    }
+  ],
+  "portal_profiles": [
+    "http://www.gpch.cteguj.in/facultydetail/show/10632",
+    "http://www.gpch.cteguj.in/facultydetail/show/37336",
+    "http://www.gpch.cteguj.in/facultydetail/show/37334",
+    "http://www.gpch.cteguj.in/facultydetail/show/37331",
+    "http://www.gpch.cteguj.in/facultydetail/show/37329",
+    "http://www.gpch.cteguj.in/facultydetail/show/36861"
+  ]
 }

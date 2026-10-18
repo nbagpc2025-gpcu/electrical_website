@@ -1,0 +1,276 @@
+{
+  "alumni": [
+    {
+      "name": "Afzal L. Lokhandwala",
+      "batch": 2011,
+      "sector": "Technical business",
+      "work": "Electrical contracting, wiring and technical services"
+    },
+    {
+      "name": "Parmar Shivam Naginlal",
+      "batch": 2023,
+      "sector": "Technical business",
+      "work": "Small industry and electrical works"
+    },
+    {
+      "name": "Brahmbhatt Keyur Samirbhai",
+      "batch": 2021,
+      "sector": "Private sector",
+      "work": "Jyoti Ltd."
+    },
+    {
+      "name": "Rathva Naran Bhai D",
+      "batch": 2015,
+      "sector": "Government service",
+      "work": "MGVCL, Gujarat"
+    },
+    {
+      "name": "Parmar Devendra Haribhai",
+      "batch": 2018,
+      "sector": "Technical business",
+      "work": "Electrical contracting and wiring"
+    },
+    {
+      "name": "Nirpex Natvarbhai Rana",
+      "batch": 2023,
+      "sector": "Higher studies",
+      "work": "Government Engineering College, Bharuch"
+    },
+    {
+      "name": "Nayak Pratikbhai Vikrambhai",
+      "batch": 2020,
+      "sector": "Technical business",
+      "work": "Electrical services and small industry"
+    },
+    {
+      "name": "Sanidhy Panchal",
+      "batch": 2021,
+      "sector": "Technical business",
+      "work": "Electrical contracting and technical services"
+    },
+    {
+      "name": "Ami Avinash Suthar",
+      "batch": 2013,
+      "sector": "Private sector",
+      "work": "Virginia Transformer India Pvt. Ltd., subsidiary of VTC, USA"
+    },
+    {
+      "name": "Jay Patel",
+      "batch": 2024,
+      "sector": "Government service",
+      "work": "Vadodara Municipal Corporation, Vadodara"
+    },
+    {
+      "name": "Sanjay Tadvi",
+      "batch": 2024,
+      "sector": "Government service",
+      "work": "DGVCL, Gujarat"
+    },
+    {
+      "name": "Rashimka Bhai",
+      "batch": 2013,
+      "sector": "Government service",
+      "work": "Junior Engineer, GETCO, Gujarat"
+    },
+    {
+      "name": "Somervala Sahil",
+      "batch": 2013,
+      "sector": "Government service",
+      "work": "Municipal Engineer, Chhotaudepur HQ"
+    },
+    {
+      "name": "Nikita Bhojvani",
+      "batch": 2013,
+      "sector": "Private sector",
+      "work": "Larsen & Toubro (L&T)"
+    },
+    {
+      "name": "Nagendar Rathva",
+      "batch": 2024,
+      "sector": "Private sector",
+      "work": "Larsen & Toubro (L&T), Vadodara"
+    },
+    {
+      "name": "Vishal Chaudhry",
+      "batch": 2020,
+      "sector": "Overseas employment",
+      "work": "Saudi Electricity Company; location recorded as Dubai / Saudi Arabia in the source"
+    },
+    {
+      "name": "Dhruv Patel",
+      "batch": 2020,
+      "sector": "Higher studies",
+      "work": "Bachelor’s degree, University of Huddersfield, UK (London Campus, as recorded)"
+    }
+  ],
+  "achievements": [
+    {
+      "category": "Department",
+      "tag": "Industry partnerships",
+      "title": "Engineering beyond the classroom",
+      "text": "Two MoUs for 2025–26 with Manish Engicorp Pvt. Ltd. and Embesys – The Project Solution, Vadodara, covering product development, consultancy, manufacturing and testing.",
+      "image": 6,
+      "slide": 6
+    },
+    {
+      "category": "Department",
+      "tag": "Renewable energy",
+      "title": "191 kW on the rooftop",
+      "text": "The campus rooftop solar plant supports renewable-energy education and reduces dependence on grid electricity.",
+      "image": 10,
+      "slide": 7
+    },
+    {
+      "category": "Faculty",
+      "tag": "NPTEL recognition",
+      "title": "V. H. Ghanchi: Discipline Star",
+      "text": "NPTEL / SWAYAM recognition for Jan–Apr 2026, as recorded in the achievements presentation.",
+      "image": 13,
+      "slide": 8
+    },
+    {
+      "category": "Faculty",
+      "tag": "Professional development",
+      "title": "QIP-PG at SVNIT Surat",
+      "text": "A six-month AICTE QIP-PG programme on Advanced Metallic Alloys for Energy Storage Applications, June–December 2025.",
+      "image": 14,
+      "slide": 8
+    },
+    {
+      "category": "Faculty",
+      "tag": "Research publication",
+      "title": "Coilgun research in Sādhanā",
+      "text": "Vasimmahamad Ghanchi and Ketan P. Badgujar: “Coil Guns: A Review on Various Design Aspects and Potential Research Areas”, Vol. 51, Article 26, published 17 January 2026. The presentation reports the journal as Q2.",
+      "image": 15,
+      "slide": 9
+    },
+    {
+      "category": "Faculty",
+      "tag": "Editorial contribution",
+      "title": "Engineering education peer review",
+      "text": "V. H. Ghanchi’s editorial review and associate-editor contribution to the Journal of Engineering Education Transformations is documented in the presentation.",
+      "image": 18,
+      "slide": 10
+    },
+    {
+      "category": "Faculty",
+      "tag": "IEEE publication",
+      "title": "Pulse-shape optimisation",
+      "text": "A Novel Pulse Shape Optimization Approach for Eliminating Armature Capture in Reluctance Coilguns. IEEE INSPIRE 2025. DOI: 10.1109/inspire67328.2025.11300502.",
+      "image": 21,
+      "slide": 12
+    },
+    {
+      "category": "Faculty",
+      "tag": "NPTEL certification",
+      "title": "G. G. Patel: Elite + Topper",
+      "text": "Stress Management certification with a score of 87% and Top 5% recognition, as recorded in the source.",
+      "image": 23,
+      "slide": 13
+    },
+    {
+      "category": "Student",
+      "tag": "Sports",
+      "title": "Weightlifting gold",
+      "text": "Gold-medal recognition at Khel Mahakumbh 3.0, documented in the department presentation.",
+      "image": 25,
+      "slide": 14
+    },
+    {
+      "category": "Student",
+      "tag": "Sports",
+      "title": "Ashwini Chhetri on the national stage",
+      "text": "ASMITA Khelo India Women’s Weightlifting League, zonal round, Modinagar, Uttar Pradesh, September 2024.",
+      "image": 26,
+      "slide": 14
+    },
+    {
+      "category": "Student",
+      "tag": "Sports",
+      "title": "Institute cricket champions",
+      "text": "Electrical students’ institute-level cricket championship, 2026.",
+      "image": 27,
+      "slide": 14
+    },
+    {
+      "category": "Student",
+      "tag": "National competition",
+      "title": "Briea national competition",
+      "text": "The presentation records second position for highest average score in the Briea National Student Competition 2025, with an institute runner-up trophy.",
+      "image": null,
+      "slide": 15
+    },
+    {
+      "category": "Student",
+      "tag": "Creative arts",
+      "title": "Vyomika International Film Awards",
+      "text": "Students and faculty honoured at the Vyomika International Film Awards, as documented in the presentation.",
+      "image": 30,
+      "slide": 15
+    },
+    {
+      "category": "Student",
+      "tag": "Project research",
+      "title": "Haptic guidance for visually impaired users",
+      "text": "A microcontroller-based final-year project submitted to the International Journal of Intelligent Robotics and Applications. Source status: under peer review, revisions requested. This is a submission, not an accepted publication.",
+      "image": 32,
+      "slide": 16
+    }
+  ],
+  "publications": [
+    {
+      "year": "2025–26",
+      "authors": "V. H. Ghanchi & K. P. Badgujar",
+      "title": "A Novel Pulse Shape Optimization Approach for Eliminating Armature Capture in Reluctance Coilguns",
+      "journal": "IEEE INSPIRE 2025, pp. 220–225"
+    },
+    {
+      "year": "2025–26",
+      "authors": "J. Patel, V. Ghanchi, R. Parmar & S. Mehta",
+      "title": "An IoT Approach for Continuous ECG Monitoring and Automated Emergency Alerts",
+      "journal": "IJARSCT, pp. 526–533"
+    },
+    {
+      "year": "2025–26",
+      "authors": "D. Rana, V. Ghanchi, S. Gandhi, R. Kantharia & A. Chhetri",
+      "title": "Underground Cable Fault Detection & Monitoring Using IoT for Smart Power Distribution",
+      "journal": "IJRPR, Vol. 6, No. 10, pp. 5379–5386"
+    },
+    {
+      "year": "2025–26",
+      "authors": "M. Sangada, V. Chaudhari, S. Gandhi, R. Kanthariya & J. Rathva",
+      "title": "Ultrasonic Velocity Measurements and Adiabatic Compressibility Analysis in Ethanol, Propan-2-ol & Diethylene Glycol",
+      "journal": "IJSRST, Vol. 12, No. 6, pp. 600–615"
+    },
+    {
+      "year": "2025–26",
+      "authors": "H. Rana, V. Ghanchi, Y. Bhati, G. Patel & N. Rathva",
+      "title": "Design and Implementation of an E-Bike Speed Controller System",
+      "journal": "IRJMETS"
+    },
+    {
+      "year": "2025–26",
+      "authors": "A. Prajapati, N. Shah, H. B. Mehta & J. Banerjee",
+      "title": "Experimental Investigations on Subcooled Flow Boiling in MCHS",
+      "journal": "Recent Advances in Thermal and Fluid Science, pp. 285–294"
+    },
+    {
+      "year": "2024–25",
+      "authors": "V. Ghanchi, K. Chaudhari, D. Chaudhari, H. Chaudhari & V. Chaudhari",
+      "title": "Microstructure–Phase Relationships in Energy Storage Metallic Alloys: A Review",
+      "journal": "IJSATE"
+    },
+    {
+      "year": "2024–25",
+      "authors": "C. Bhargav, V. Ghanchi, R. Kantharia, S. Gandhi & N. Rana",
+      "title": "An Efficient Asymmetrical PWM Technique for Speed Control of Single-Phase Induction Motors",
+      "journal": "IJSATE"
+    },
+    {
+      "year": "2023–24",
+      "authors": "R. Patel, V. Ghanchi, G. Patel, S. Mehta & K. Rathva",
+      "title": "Design and Implementation of a Microcontroller Based Secret Knock Detecting Door Lock System",
+      "journal": "IJSATE"
+    }
+  ]
+}
