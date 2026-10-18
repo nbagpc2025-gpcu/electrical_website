@@ -18,7 +18,7 @@ window.VISIT_COUNTER_START = 1000;
    Paste the sheet's "Publish to web" CSV link between the quotes below.
    Once set, notices come from the sheet and the NOTICES list below is only a backup.
    Leave it "" to use the list. */
-window.NOTICES_SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQzojHsWS58bkH3kBmIq1SqFl_4_qtrg4lK5qepIfSFyIJC-SfN718uRo8BUvl0uw/pub?gid=1548518541&single=true&output=csv";
+window.NOTICES_SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT7yhccKa2VHctzvfRLObkXDet-9D2LsnulHXCszcyriQa1p4i7TGPUN8vE2wZtrA/pub?gid=297775483&single=true&output=csv";
 
 /* Notice fields:
      date:     "2026-10-12" (YYYY-MM-DD) or "" if no date
