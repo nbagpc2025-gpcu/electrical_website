@@ -13,12 +13,13 @@
 
   function noticeHTML(n) {
     var d = parseDate(n.date);
-    var isNew = d && (Date.now() - d.getTime()) < 7 * 864e5 && d.getTime() <= Date.now() + 864e5;
+    var isNew = d && (Date.now() - d.getTime()) < 7 * 864e5 && d.getTime() <= Date.now();
     var dateBox = d && !isNaN(d)
       ? '<span class="block font-display text-title-md">' + String(d.getDate()).padStart(2, "0") +
         '</span><span class="block font-tech text-caption uppercase text-on-surface-variant">' +
         MONTHS[d.getMonth()] + " " + String(d.getFullYear()).slice(2) + "</span>"
       : '<span class="material-symbols-outlined text-secondary">campaign</span>';
+    n = Object.assign({}, n, {link: safeLink(n.link)});
     var tag = n.link ? "a" : "div";
     var href = n.link ? ' href="' + esc(n.link) + '" target="_blank" rel="noopener"' : "";
     return "<" + tag + href + ' class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-start gap-space-md">' +
@@ -57,14 +58,15 @@
   }
   function fromSheet(text) {
     var rows = parseCSV(text).filter(function (r) { return r.some(function (c) { return c.trim(); }); });
-    if (!rows.length) return [];
+    if (!rows.length) throw new Error("Empty CSV");
     var head = rows.shift().map(function (h) { return h.trim().toLowerCase(); });
     var col = function (names) { for (var i = 0; i < names.length; i++) { var k = head.indexOf(names[i]); if (k > -1) return k; } return -1; };
-    var c = { date: col(["date"]), category: col(["category", "type"]), title: col(["title", "notice", "subject"]),
-      text: col(["details", "description", "text"]), link: col(["link", "file link", "url", "file"]), show: col(["show", "show on website", "visible"]) };
+    var c = { date: col(["date"]), category: col(["category", "type"]), title: col(["title", "name", "notice", "subject"]),
+      semester: col(["semester"]), text: col(["details", "description", "text"]), link: col(["link", "file link", "url", "file"]), show: col(["show", "show on website", "visible"]) };
+    if (c.title < 0 || c.link < 0) throw new Error("CSV requires Name or Title, and Link");
     var get = function (r, k) { return c[k] > -1 ? (r[c[k]] || "").trim() : ""; };
     return rows.map(function (r) {
-      return { date: get(r, "date"), category: get(r, "category"), title: get(r, "title"), text: get(r, "text"), link: get(r, "link"), show: get(r, "show") };
+      return { semester: get(r, "semester"), date: get(r, "date"), category: get(r, "category"), title: get(r, "title"), text: get(r, "text"), link: get(r, "link"), show: get(r, "show") };
     }).filter(function (n) { return n.title && !/^(no|n|hide|false)$/i.test(n.show); });
   }
   function newestFirst(list) {
@@ -74,6 +76,9 @@
       if (da && !db) return -1; if (db && !da) return 1;
       return a[1] - b[1];
     }).map(function (x) { return x[0]; });
+  }
+  function safeLink(value) {
+    try { var u = new URL(value); return /^https?:$/.test(u.protocol) ? u.href : ""; } catch (_) { return ""; }
   }
   var noticesPromise;
   function loadNotices() {
@@ -119,10 +124,34 @@
     var cut = function (arr) { return limit ? arr.slice(0, limit) : arr; };
     if (type === "notices") {
       el.innerHTML = '<p class="p-space-md bg-surface-container-lowest rounded-xl text-on-surface-variant">Loading notices…</p>';
-      loadNotices().then(function (list) {
-        el.innerHTML = list.length ? cut(list).map(noticeHTML).join("")
-          : '<p class="p-space-md bg-surface-container-lowest rounded-xl text-on-surface-variant">No notices right now. Please check back later.</p>';
-      });
+      var current = [], controls;
+      function paint() {
+        var list = current.filter(function(n) {
+          return !controls || ((!controls.q.value || [n.title,n.text,n.category,n.semester].join(" ").toLowerCase().includes(controls.q.value.toLowerCase())) &&
+            (!controls.cat.value || n.category === controls.cat.value) && (!controls.sem.value || n.semester === controls.sem.value));
+        });
+        el.innerHTML = list.length ? cut(list).map(noticeHTML).join("") : '<p>No notices match.</p>';
+      }
+      if (!limit) {
+        var bar = document.createElement("div"); bar.className = "notice-filters";
+        bar.innerHTML = '<label>Search notices<input type="search"></label><label>Category<select><option value="">All categories</option></select></label><label>Semester<select><option value="">All semesters</option></select></label>';
+        el.before(bar); controls = {q:bar.querySelector("input"),cat:bar.querySelectorAll("select")[0],sem:bar.querySelectorAll("select")[1]};
+        bar.addEventListener("input",paint); bar.addEventListener("change",paint);
+      }
+      function refresh() {
+        if (document.hidden) return;
+        noticesPromise = null;
+        loadNotices().then(function(list) {
+          current = list;
+          if (controls) [[controls.cat,"category","All categories"],[controls.sem,"semester","All semesters"]].forEach(function(item) {
+            var old = item[0].value; item[0].replaceChildren(new Option(item[2],""));
+            Array.from(new Set(list.map(function(n){return n[item[1]];}).filter(Boolean))).sort().forEach(function(v){item[0].add(new Option(v,v));});
+            item[0].value = old;
+          });
+          paint();
+        });
+      }
+      refresh(); setInterval(refresh,60000); document.addEventListener("visibilitychange",refresh);
     } else if (type === "activities") {
       el.innerHTML = cut(window.ACTIVITIES || []).map(activityHTML).join("");
     } else if (type === "downloads") {
@@ -190,7 +219,7 @@ document.addEventListener("click", function () {
 /* Visitor counter: records the visit and shows the total (GoatCounter; code set in content.js) */
 (function () {
   var code = (window.VISIT_COUNTER_CODE || "").trim();
-  if (!code || location.protocol === "file:") return;
+  if (!/^[a-z0-9][a-z0-9-]*$/i.test(code) || location.protocol === "file:") return;
   var base = "https://" + code + ".goatcounter.com";
   var s = document.createElement("script");
   s.async = true; s.src = "https://gc.zgo.at/count.js"; s.setAttribute("data-goatcounter", base + "/count");
@@ -199,7 +228,12 @@ document.addEventListener("click", function () {
     if (!d || d.count == null) return;
     var box = document.getElementById("visit-counter"), n = document.getElementById("visit-count");
     if (!box || !n) return;
-    n.textContent = String(d.count).trim();
+    var actual = Number(String(d.count).replace(/,/g, "").trim());
+    var start = Number(window.VISIT_COUNTER_START);
+    if (!Number.isSafeInteger(actual) || actual < 0) return;
+    if (!Number.isSafeInteger(start) || start < 0) start = 1000;
+    n.textContent = (start + actual).toLocaleString("en-IN");
+    box.title = "Displayed visits = configured starting count of " + start + " + GoatCounter’s actual recorded total of " + actual + ". The starting count does not represent recorded analytics visits.";
     box.classList.remove("hidden"); box.classList.add("inline-flex");
   }).catch(function () {});
 })();
