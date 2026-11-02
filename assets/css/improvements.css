@@ -14,8 +14,8 @@
 .font-body{font-family:Inter,"Noto Sans Gujarati","Noto Sans Devanagari",sans-serif}.font-display{font-family:Outfit,"Noto Sans Gujarati","Noto Sans Devanagari",sans-serif}.font-tech{font-family:"Space Grotesk","Noto Sans Gujarati","Noto Sans Devanagari",sans-serif}
 
 /* Placeholder marker: content the department still has to supply */
-.ph{display:inline-block;padding:.05rem .55rem;border:1px dashed #b7791f;border-radius:999px;background:#fff8e6;color:#7a4b00;font-size:.8em;font-weight:600;line-height:1.5;white-space:nowrap}
-html[data-theme=dark] .ph{background:rgba(245,185,66,.12);border-color:#c99a3b;color:#f5d58a}
+.data-soon{display:inline-block;padding:.05rem .55rem;border:1px dashed #b7791f;border-radius:999px;background:#fff8e6;color:#7a4b00;font-size:.8em;font-weight:600;line-height:1.5;white-space:nowrap}
+html[data-theme=dark] .data-soon{background:rgba(245,185,66,.12);border-color:#c99a3b;color:#f5d58a}
 .ph-card{display:flex;flex-direction:column;gap:.5rem}
 
 /* Keep the department name readable now that the menu has more items */
