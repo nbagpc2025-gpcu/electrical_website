@@ -107,7 +107,14 @@
       "</div></article>";
   }
 
-  function downloadHTML(d, compact) {
+  function downloadHTML(d, compact, i) {
+    if (!compact) {
+      var fees = /^https:\/\/erp\.eshiksa\.net/.test(d.link);
+      return '<a href="' + esc(d.link) + '" target="_blank" rel="noopener" class="cta-box dl-box ' + (fees ? "cta-fees" : d.badge ? "dl-c-new" : "dl-c" + (i % 8)) + '">' +
+        '<span class="cta-icon"><span translate="no" class="material-symbols-outlined" aria-hidden="true">' + esc(d.icon || "folder") + "</span></span>" +
+        '<span class="cta-text"><strong>' + esc(d.title) + (d.badge ? ' <em class="new-badge">' + esc(d.badge) + "</em>" : "") + "</strong><small>" + esc(d.text) + "</small></span>" +
+        '<span class="cta-go">' + (fees ? "Pay Now" : "Open") + '<span translate="no" class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span></a>';
+    }
     return '<a href="' + esc(d.link) + '" target="_blank" rel="noopener" class="flex items-center justify-between gap-space-sm ' +
       (compact ? "p-space-sm bg-surface-slate hover:bg-surface-container" : "p-space-md bg-surface-container-lowest shadow-sm hover:shadow-md") +
       ' rounded-lg transition-all">' +
@@ -115,7 +122,7 @@
       'material-symbols-outlined text-secondary">' + esc(d.icon || "folder") + "</span>" +
       '<div class="min-w-0"><span class="block font-semibold text-body-md text-on-surface">' + esc(d.title) + "</span>" +
       '<span class="block text-caption text-on-surface-variant">' + esc(d.text) + "</span></div></div>" +
-      '<span class="material-symbols-outlined text-on-surface-variant shrink-0">folder_open</span></a>';
+      '<span translate="no" class="material-symbols-outlined text-on-surface-variant shrink-0">folder_open</span></a>';
   }
 
   document.querySelectorAll("[data-render]").forEach(function (el) {
@@ -142,7 +149,7 @@
       if (!limit) {
         var bar = document.createElement("div"); bar.className = "notice-filters";
         bar.innerHTML = '<label>Search notices<input type="search"></label><label>Category<select><option value="">All categories</option></select></label><label>Semester<select><option value="">All semesters</option></select></label>';
-        el.before(bar); controls = {q:bar.querySelector("input"),cat:bar.querySelectorAll("select")[0],sem:bar.querySelectorAll("select")[1]};
+        el.before(bar); controls = {q:bar.querySelector("input"),cat:bar.querySelectorAll("select")[0],sem:bar.querySelectorAll("select")[1]}; var urlParams = new URLSearchParams(location.search); controls.q.value = urlParams.get("q") || ""; var wantCat = urlParams.get("category");
         bar.addEventListener("input",paint); bar.addEventListener("change",paint);
       }
       function refresh() {
@@ -151,11 +158,11 @@
         loadNotices().then(function(list) {
           current = list;
           if (controls) [[controls.cat,"category","All categories"],[controls.sem,"semester","All semesters"]].forEach(function(item) {
-            var old = item[0].value; item[0].replaceChildren(new Option(item[2],""));
+            var old = item[0].value || (item[1] === "category" && wantCat) || ""; item[0].replaceChildren(new Option(item[2],""));
             Array.from(new Set(list.map(function(n){return n[item[1]];}).filter(Boolean))).sort().forEach(function(v){item[0].add(new Option(v,v));});
             item[0].value = Array.from(item[0].options).some(function(o){ return o.value === old; }) ? old : "";
           });
-          paint();
+          wantCat = null; paint();
         });
       }
       refresh(); setInterval(refresh,60000); document.addEventListener("visibilitychange",refresh);
@@ -163,7 +170,7 @@
       el.innerHTML = cut(window.ACTIVITIES || []).map(activityHTML).join("");
     } else if (type === "downloads") {
       var compact = el.getAttribute("data-variant") === "compact";
-      el.innerHTML = cut(window.DOWNLOADS || []).map(function (d) { return downloadHTML(d, compact); }).join("");
+      el.innerHTML = cut(window.DOWNLOADS || []).map(function (d, i) { return downloadHTML(d, compact, i); }).join("");
     }
   });
 
